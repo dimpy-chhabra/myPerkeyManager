@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.dimpy.myperkeymanager.addNode">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:id="@+id/LinearLayoutPostScan"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:elevation="@dimen/nav_header_height">
+
+        <ImageView
+            android:id="@+id/imageViewPostScan"
+            android:layout_width="100sp"
+            android:layout_height="80sp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter"
+            android:shadowColor="@color/colorHoloText"
+            android:shadowRadius="2"
+            android:src="@android:drawable/checkbox_on_background" />
+
+        <TextView
+            android:id="@+id/textViewPostScan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="Details Of Added Node"
+            android:padding="16sp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:id="@+id/LinearLayoutClickable"
+        android:orientation="horizontal"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:elevation="@dimen/nav_header_height">
+
+        <ImageButton
+            android:id="@+id/scan_button"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerCrop"
+            android:shadowColor="@color/colorHoloText"
+            android:shadowRadius="2"
+            android:src="@android:drawable/ic_input_add" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="Click on the Plus sign to add a node in your lot"
+            android:padding="16sp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+    </LinearLayout>
+</RelativeLayout>

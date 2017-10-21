@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85sp"
+    android:background="@color/colorDivider"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:id="@+id/imageViewOccupancy"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@android:drawable/ic_media_ff" />
+
+        <TextView
+            android:id="@+id/textViewSerialNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@id/imageViewOccupancy"
+            android:layout_toRightOf="@id/imageViewOccupancy"
+            android:text="Parking Id : 001"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#212121" />
+
+        <TextView
+            android:id="@+id/textView_Information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewSerialNumber"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/imageViewOccupancy"
+            android:layout_toRightOf="@id/imageViewOccupancy"
+            android:text="Occupied"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#727272" />
+
+    </RelativeLayout>
+
+</LinearLayout>

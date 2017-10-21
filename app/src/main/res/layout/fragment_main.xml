@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccentTrancy"
+    tools:context="com.example.dimpy.myperkeymanager.mainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Welcome to Perkey Manager!"
+        android:id="@+id/textViewIntro"
+        android:padding="16sp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewIntro"
+        android:text="The smarter way of managing parking spots!"
+        android:layout_centerHorizontal="true"
+        android:padding="16sp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+</RelativeLayout>

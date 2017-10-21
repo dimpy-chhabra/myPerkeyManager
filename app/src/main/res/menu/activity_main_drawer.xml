@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/viewLot"
+            android:icon="@drawable/ic_laptop_black_18dp"
+            android:title="View Lot" />
+        <item
+            android:id="@+id/viewDetails"
+            android:icon="@drawable/ic_developer_board_black_18dp"
+            android:title="View Details" />
+        <item
+            android:id="@+id/addNode"
+            android:icon="@drawable/ic_note_add_black_18dp"
+            android:title="Add Node" />
+        <item
+            android:id="@+id/aboutMe"
+            android:icon="@drawable/ic_person_black_18dp"
+            android:title="About Me" />
+    </group>
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Contact Us" />
+        </menu>
+    </item>
+
+</menu>
