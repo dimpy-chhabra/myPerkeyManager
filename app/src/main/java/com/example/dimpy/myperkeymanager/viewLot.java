@@ -1,6 +1,5 @@
 package com.example.dimpy.myperkeymanager;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,7 +17,6 @@ public class viewLot extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -34,9 +32,6 @@ public class viewLot extends Fragment {
                         Toast.LENGTH_SHORT).show();
             }
         });
-
-
         return view;
     }
-
 }
