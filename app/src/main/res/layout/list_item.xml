@@ -2,7 +2,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="85sp"
+    android:layout_height="wrap_content"
     android:background="@color/colorDivider"
     android:orientation="vertical">
 
@@ -15,10 +15,11 @@
 
         <ImageView
             android:id="@+id/imageViewOccupancy"
-            android:layout_width="50sp"
-            android:layout_height="50sp"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
             android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:padding="8sp"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:src="@android:drawable/ic_media_ff" />
 
@@ -27,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="2dp"
             android:layout_toEndOf="@id/imageViewOccupancy"
             android:layout_toRightOf="@id/imageViewOccupancy"
             android:text="Parking Id : 001"
@@ -40,8 +41,23 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/textViewSerialNumber"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@id/imageViewOccupancy"
+            android:layout_toRightOf="@id/imageViewOccupancy"
+            android:text="Occupied"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#727272" />
+
+        <TextView
+            android:id="@+id/textView_Information_Extra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_Information"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
             android:layout_toEndOf="@id/imageViewOccupancy"
             android:layout_toRightOf="@id/imageViewOccupancy"
             android:text="Occupied"

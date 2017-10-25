@@ -15,6 +15,10 @@
             android:icon="@drawable/ic_note_add_black_18dp"
             android:title="Add Node" />
         <item
+            android:id="@+id/viewStats"
+            android:icon="@drawable/ic_poll_black_18dp"
+            android:title="View Stats" />
+        <item
             android:id="@+id/aboutMe"
             android:icon="@drawable/ic_person_black_18dp"
             android:title="About Me" />

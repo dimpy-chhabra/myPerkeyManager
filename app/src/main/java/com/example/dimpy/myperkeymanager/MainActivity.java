@@ -143,6 +143,13 @@ public class MainActivity extends AppCompatActivity
                             new addNode(),
                             "addNode").commit();
 
+        } else if (id == R.id.viewStats) {
+            fragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragmentHolder,
+                            new viewStats(),
+                            "viewStats").commit();
+
         } else if (id == R.id.aboutMe) {
             fragmentManager
                     .beginTransaction()

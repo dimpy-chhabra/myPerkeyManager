@@ -33,20 +33,40 @@ public class pSpotListAdapter extends ArrayAdapter<pSpot> {
         pSpot currentParkingSpot = getItem(position);
         int status = Integer.parseInt(currentParkingSpot.getStatus());
 
+        ImageView imageView = (ImageView) listItemView.findViewById(R.id.imageViewOccupancy);
+
         TextView textViewSerialNumber = (TextView) listItemView.findViewById(R.id.textViewSerialNumber);
-        textViewSerialNumber.setText("Parking Id : " + currentParkingSpot.getId());
+        textViewSerialNumber.setText("Parking Id : " + currentParkingSpot.getId().substring(9));
+
+        TextView textViewInformationExtra = (TextView) listItemView.findViewById(R.id.textView_Information_Extra);
+        textViewInformationExtra.setText("");
 
         TextView textView_Information = (TextView) listItemView.findViewById(R.id.textView_Information);
-        textView_Information.setText("Status : " + status);
+        if (status == 0) {
+            textView_Information.setText("Status : New");
+            imageView.setImageResource(R.drawable.ic_done_all_black_36dp);
+            textViewInformationExtra.setText("This spot is AVAILABLE!!");
 
+        } else if (status == 2) {
+            textView_Information.setText("Status : Free");
+            imageView.setImageResource(R.drawable.ic_done_black_36dp);
+            textViewInformationExtra.setText("This spot is AVAILABLE!!\n" +
+                    "Previous Parker Details : \n" + currentParkingSpot.getUsr_name() + "\n" +
+                    "" + currentParkingSpot.getUsr_num() + "\n" +
+                    "" + currentParkingSpot.getUsr_email());
+        } else if (status == 1) {
+            textView_Information.setText("Status : Occupied");
+            imageView.setImageResource(R.drawable.ic_donut_large_black_36dp);
+            textViewInformationExtra.setText("This spot is OCCUPIED!!\n" +
+                    "Present Parker Details : \n" + currentParkingSpot.getUsr_name() + "\n" +
+                    "" + currentParkingSpot.getUsr_num() + "\n" +
+                    "" + currentParkingSpot.getUsr_email());
+        } else {
+            textView_Information.setText("~~~");
+        }
         //status 1 ==> occupied
         //else ==> available
 
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.imageViewOccupancy);
-        if (status == 1)
-            imageView.setImageResource(android.R.drawable.btn_minus);
-        else
-            imageView.setImageResource(android.R.drawable.btn_star);
         return listItemView;
     }
 
